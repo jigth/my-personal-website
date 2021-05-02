@@ -1,0 +1,18 @@
+body {
+  background: #eee;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  text-align: left;
+}
+
+.section-separator {
+  width: 10%;
+  border: rgb(23, 23, 131) dotted 10px;
+  border-bottom: none;
+  margin: 100px auto;
+}
