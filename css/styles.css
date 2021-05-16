@@ -6,13 +6,22 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+a {
+  color: #415e96;
+}
+
 ul {
   text-align: left;
 }
 
 .section-separator {
   width: 10%;
-  border: rgb(23, 23, 131) dotted 10px;
+  border: #3164ca dotted 10px;
   border-bottom: none;
   margin: 100px auto;
+}
+
+.pro {
+  color: #34568B;
+  text-decoration: underline;
 }
