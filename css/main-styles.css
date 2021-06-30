@@ -14,14 +14,68 @@ ul {
   text-align: left;
 }
 
+#profile-photo {
+    width: 100px;
+}
+
+.navbar {
+    margin-top: 10px;
+    background: #222;
+    padding: 20px;
+    border-style: double;
+    border-radius: 10px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    color: #eee;
+    text-decoration: none;
+    margin: auto 20px;
+}
+
+.nav-item:hover {
+    color: #7088ad;
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 30px;
+    background: #222;
+    padding: 20px;
+    color: #eee;
+    border-radius: 10px;
+}
+
+.title {
+    font-family: Merriweather, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f3453;
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: 300;
+}
+
 .section-separator {
   width: 10%;
-  border: #3164ca dotted 10px;
+  border: #222 dotted 10px;
   border-bottom: none;
-  margin: 100px auto;
+  margin: 50px auto;
 }
 
 .pro {
   color: #34568B;
   text-decoration: underline;
+}
+
+.mt-50 {
+    margin-top: 50px;
 }
