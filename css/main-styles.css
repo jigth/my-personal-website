@@ -1,29 +1,45 @@
 body {
-  background: #eee;
-  text-align: center;
-  width: 60%;
-  margin: auto;
-  font-family: "Montserrat", sans-serif;
+    background: #eee;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    min-width: 268px;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
 }
 
 a {
-  color: #415e96;
+    color: #415e96;
 }
 
-ul {
-  text-align: left;
+p {
+    text-align: justify;
 }
 
 #profile-photo {
-    width: 100px;
+    width: 30vw;
+}
+
+.profile {
+    margin: auto;
+}
+
+.profile-content {
+    width: 30vw;
+    margin: auto;
+}
+
+#contact {
+    background: #222;
+    padding: 20px;
 }
 
 .navbar {
     margin-top: 10px;
     background: #222;
     padding: 20px;
-    border-style: double;
     border-radius: 10px;
+    color: orange;
 }
 
 .nav-list {
@@ -54,7 +70,7 @@ ul {
 
 .title {
     font-family: Merriweather, serif;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 700;
     color: #1f3453;
 }
@@ -64,9 +80,54 @@ ul {
     font-weight: 300;
 }
 
+.project-item {
+    background: #222;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 20px;
+}
+
+.project-item a {
+    color: #eee;
+    text-decoration: none;
+    font-weight: bold;
+    font-weight: 700;
+}
+
+.project-image {
+    width: 100%;
+}
+
+.contact-content {
+    padding: 10px;
+}
+
+.contact-content div {
+    padding: 10px;
+    background: #222;
+}
+
+.social-image {
+    width: 80%;
+}
+
 .section-separator {
   width: 10%;
-  border: #222 dotted 10px;
+  border: #222 dashed 10px;
+  border-bottom: none;
+  margin: 50px auto;
+}
+
+.mt-1 {
+    margin-top: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+.section-separator {
+  width: 10%;
+  border: #222 dashed 10px;
   border-bottom: none;
   margin: 50px auto;
 }
@@ -78,4 +139,53 @@ ul {
 
 .mt-50 {
     margin-top: 50px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    body {
+        width: 90%;
+    }
+
+    .navbar {
+        padding: 5px;
+    }
+
+    .nav-item {
+        margin: auto 5px;
+    }
+
+    #profile-photo {
+        width: 50vw;
+    }
+
+    .profile-content {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 338px) {
+    body {
+        width: 90%;
+        word-wrap: break-word;
+    }
+
+    .navbar {
+        padding: 5px;
+    }
+
+    .nav-item {
+        margin: auto 5px;
+    }
+
+    #profile-photo {
+        width: 80vw;
+    }
+
+    .profile-content {
+        width: 80vw;
+    }
 }
