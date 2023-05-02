@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@11ty/eleventy": "^1.0"
+    "@11ty/eleventy": "^2.0.1"
   },
   "name": "my-site",
   "description": "My personal website where I describe my skills and some projects that I've done.",
