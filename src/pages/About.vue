@@ -1,0 +1,4 @@
+<template>
+    <h1>About me page</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quos non corrupti illum assumenda ex error fuga minus eius hic, sequi voluptatum voluptates asperiores perferendis amet earum nemo. Quam facere illum atque, provident distinctio id blanditiis possimus molestiae placeat nobis dolorum! Corrupti rerum pariatur ipsa molestiae ab eveniet itaque totam voluptatibus quos nam fuga sint, beatae, dolorem quidem consectetur atque. Numquam id nemo omnis architecto deleniti asperiores neque labore, ipsa provident voluptatum ducimus nisi soluta perferendis quidem nam aspernatur repellendus impedit suscipit, modi reprehenderit laboriosam magni explicabo. Recusandae minima voluptatum quo libero accusantium explicabo ea voluptate, nobis minus inventore quam?</p>
+</template>
