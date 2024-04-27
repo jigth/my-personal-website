@@ -24,3 +24,19 @@
 import PostImage from "../shared/modules/posts/application/PostImage.vue"
 import PostVideo from "../shared/modules/posts/application/PostVideo.vue"
 </script>
+
+<style lang="scss" scoped>
+$linkColor: white;
+
+// section > ul { display: none; }
+section {
+    background-color: $bgColor;
+    ul {
+        a {
+            &:link {
+                color: $linkColor;
+            }
+        }
+    }
+}
+</style>
