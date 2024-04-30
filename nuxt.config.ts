@@ -4,6 +4,15 @@ const assetsDir = "src/shared/assets";
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  modules: [
+    ['@nuxtjs/google-fonts', {
+      families: {
+        Poppins: true,
+        Roboto: true,
+      }
+    }]
+  ],
+
   // Keep some dirs under src, but the rest of them are in their default location
   dir: {
     pages: "src/pages",
