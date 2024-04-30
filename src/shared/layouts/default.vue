@@ -1,6 +1,8 @@
 <template>
     <Navbar />
-    <slot />
+    <div style="padding: 2rem 0;">
+        <slot />
+    </div>
 </template>
 
 <script setup lang="ts">
