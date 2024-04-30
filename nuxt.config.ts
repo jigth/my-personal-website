@@ -16,6 +16,7 @@ export default defineNuxtConfig({
   // Keep some dirs under src, but the rest of them are in their default location
   dir: {
     pages: "src/pages",
+    layouts: "src/shared/layouts",
     assets: `${assetsDir}`,
   },
 
