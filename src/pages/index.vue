@@ -2,7 +2,7 @@
   <section>
     <h1 class="my-name">Daniel Ochoa Montes</h1>
     <section>
-      <h1 class="specialization">Software Development</h1>
+      <h1 ref="specialization" class="specialization">Software Development</h1>
     </section>
 
     <section class="tech-projects">
@@ -74,6 +74,36 @@ const projects: Project[] = [
     link: "https://github.com/jigth/JinfoTeur/",
   },
 ];
+
+const specialization = ref(null);
+const specializationDefined = ref(false);
+const isMounted = ref(false);
+
+const detectAnimatedElement = () => {
+  if (specialization.value && isMounted.value) {
+    specializationDefined.value = true;
+  }
+}
+
+const manageAnimatedElementVisibility = () => {
+  if (specialization.value === null) return;
+
+  const windowHeight = window.innerHeight;
+  const specializationNode = (specialization.value as HTMLElement);
+  const nodePosition = specializationNode.getBoundingClientRect();
+
+  if (nodePosition.top < windowHeight) {
+    specializationNode.classList.add('visible');
+  }
+}
+
+watch(specialization, detectAnimatedElement);
+
+onMounted(() => {
+  isMounted.value = true;
+  window.addEventListener('scroll', manageAnimatedElementVisibility);
+  window.addEventListener('touchmove', manageAnimatedElementVisibility);
+})
 </script>
 
 <style scoped lang="scss">
@@ -85,12 +115,19 @@ $headingColor: #444;
   color: $headingColor;
   padding: 30vh 0;
   text-align: center;
-  padding-top: 20rem auto;
 }
 
 .specialization {
-  text-align: center;
   font-size: 3rem;
+  
+  transform: translateX(-100%);
+  transition: transform 1s ease;
+
+  &.visible {
+    transform: translateX(0);
+    text-align: center;
+
+  }
 }
 
 .tech-projects {
