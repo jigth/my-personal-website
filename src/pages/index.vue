@@ -19,7 +19,7 @@
       </ul>
     </section>
 
-    <section style="width: 80%; margin: auto">
+    <section id="about" style="width: 80%; margin: auto">
       <h1 style="padding-bottom: 20px">About me</h1>
       <p>
         I am a Software Engineer with degree in Systems Engineering. I have
@@ -142,8 +142,15 @@ $headingColor: #444;
   &-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 20px 30px;
     list-style: none;
+    transition: transform 0.5s ease;
+
+    &__list-item {
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
 
     &__list-item__link {
       text-decoration: none;
@@ -160,8 +167,14 @@ $headingColor: #444;
         display: flex;
         align-self: center;
         justify-content: center;
-        padding: 50px;
+        padding: 30px;
         border: 1px solid black;
+        transition: border-radius 0.55s ease;
+
+        &:hover {
+          border-radius: 0 20px 0 20px;
+          background: #fbd3aa;
+        }
       }
     }
   }
