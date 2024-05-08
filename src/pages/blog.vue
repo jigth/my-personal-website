@@ -30,7 +30,6 @@ $linkColor: white;
 
 section {
     padding: $pagePadding;
-    background-color: $bgColor;
     ul {
         a {
             &:link {
