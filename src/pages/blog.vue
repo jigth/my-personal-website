@@ -28,8 +28,8 @@ import PostVideo from "../shared/modules/posts/application/PostVideo.vue"
 <style lang="scss" scoped>
 $linkColor: white;
 
-// section > ul { display: none; }
 section {
+    padding: $pagePadding;
     background-color: $bgColor;
     ul {
         a {
