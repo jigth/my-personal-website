@@ -26,8 +26,9 @@
 
 <script setup lang="ts">
 const navMenuItems: { name: string, link: string }[] = [
+    { name: "Home", link: "/" },
+    { name: "About", link: "/about" },
     { name: "Blog", link: "/blog" },
-    { name: "Info", link: "/#about" }
 ]
 </script>
 
@@ -42,7 +43,7 @@ const navMenuItems: { name: string, link: string }[] = [
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: .5rem 1rem;
+    padding: 1rem 1rem;
     font-size: 1.15rem;
 
     &-separator {
@@ -61,6 +62,7 @@ const navMenuItems: { name: string, link: string }[] = [
             
             &:hover {
                 text-shadow: 0 0 0.7px $defaultTextColor;
+                transform: scale(1.05);
             } 
 
             &:link {
