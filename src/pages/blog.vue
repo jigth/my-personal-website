@@ -1,41 +1,37 @@
 <template>
     <section>
-        <h1>My Blog</h1>
-        <ul>
-            <li><a href="#">Post one</a></li>
-            <li><a href="#">Post two</a></li>
-            <li><a href="#">Post three</a></li>
-        </ul>
-    </section>
-
-    <section>
-        <h1>Experiment Zone</h1>
-        <PostImage 
-            src="https://img.freepik.com/free-vector/hand-drawn-samurai-silhouette_23-2151184880.jpg?size=338&ext=jpg&ga=GA1.1.1224184972.1714003200&semt=sph"
-            alt="Samurai Image"
-            legend="Greatest samurai in the history of Japan"
-            imgStyles="width: 100px; height: 100px;"
-        />
-        <PostVideo />
+        <BlogArchive title="My Posts" :posts="blogArchivePosts"/>
     </section>
 </template>
 
 <script setup lang="ts">
-import PostImage from "../shared/modules/posts/application/PostImage.vue"
-import PostVideo from "../shared/modules/posts/application/PostVideo.vue"
+import BlogArchive from "../shared/modules/blog/blog-archive.vue";
+import type { BlogArchivePost } from "../shared/modules/blog/domain/posts";
+
+const blogArchivePosts: BlogArchivePost[] = [
+    {
+        title: 'title 1',
+        description: 'description 1',
+        imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png',
+        imgAlt: 'Mobile Phone post',
+        postLink: '/',
+    },
+    {
+        title: 'title 2',
+        description: 'description 2',
+        imgUrl: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg',
+        imgAlt: 'Colorful peacock',
+        postLink: '/',
+    },
+    {
+        title: 'title 3',
+        description: 'description 3',
+        imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Creeperasha_Linux_test_image_upload.png',
+        imgAlt: 'Tux Being Tux',
+        postLink: '/',
+    },
+]
 </script>
 
 <style lang="scss" scoped>
-$linkColor: white;
-
-section {
-    padding: $pagePadding;
-    ul {
-        a {
-            &:link {
-                color: $linkColor;
-            }
-        }
-    }
-}
 </style>
