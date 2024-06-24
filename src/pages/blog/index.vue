@@ -5,13 +5,13 @@
 </template>
 
 <script setup lang="ts">
-import BlogArchive from "../shared/modules/blog/blog-archive.vue";
-import type { BlogArchivePost } from "../shared/modules/blog/domain/posts";
+import BlogArchive from "~/src/shared/modules/blog/application/blog-archive.vue";
+import type { BlogArchivePost } from "../../shared/modules/blog/domain/posts";
 
 const blogArchivePosts: BlogArchivePost[] = [
     {
         title: 'title 1',
-        description: 'description 1',
+    description: 'description 1',
         imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png',
         imgAlt: 'Mobile Phone post',
         postLink: '/',

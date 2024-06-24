@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import { type PropType } from 'vue';
 import BlogArchivePostItem from './blog-archive-post-item.vue';
-import { type BlogArchivePost } from './domain/posts'
+import { type BlogArchivePost } from '../domain/posts'
 
 defineProps({
     title: {
