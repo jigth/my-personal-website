@@ -1,0 +1,34 @@
+$maxContentWidth: 40vw;
+
+#post-content :deep() {
+    // margin: 20px 40px;
+
+    width: 40vw;
+    max-width: $maxContentWidth;
+    margin: auto;
+
+    #title {
+        text-align: center;
+        max-width: $maxContentWidth;
+        font-size: 3rem;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin: 20px;
+        font-size: 1.2rem;
+    }
+
+    img {
+        width: 300px;
+        text-align: center;
+        margin: auto;
+        background: red;
+        display: block;
+    }
+
+    #featured-img {
+        width: $maxContentWidth !important;
+    }
+}
