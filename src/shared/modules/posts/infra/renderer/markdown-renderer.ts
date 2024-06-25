@@ -8,7 +8,7 @@ export class MarkdownRenderer implements IMarkdownRenderer {
     private markdownProcessor: MarkdownIt
 
     private constructor () { 
-        this.markdownProcessor = MarkdownIt()
+        this.markdownProcessor = MarkdownIt({ html: true })
     }
 
     static getInstance () {
@@ -19,7 +19,13 @@ export class MarkdownRenderer implements IMarkdownRenderer {
     }
 
     private getSanitizerConfig = () => ({
-        allowedTags: sanitizeHTML.defaults.allowedTags.concat([ 'img' ])  
+        allowedTags: sanitizeHTML.defaults.allowedTags.concat([ 'img' ]),
+        allowedAttributes: {
+            ...sanitizeHTML.defaults.allowedAttributes,
+            img: [ 'id', 'class', 'src', 'srcset', 'alt' ],
+            h1: [ 'id', 'class', 'src', 'srcset', 'alt' ],
+        }
+
     })
 
     private sanitizeHTML(html: string): string {
@@ -28,6 +34,12 @@ export class MarkdownRenderer implements IMarkdownRenderer {
     }
 
     renderTextToHTML(markdown: string): string {
+        return this.sanitizeHTML(
+            this.markdownProcessor.render(markdown)
+        );
+    }
+
+    renderFileToHTML(markdown: string): string {
         return this.sanitizeHTML(
             this.markdownProcessor.render(markdown)
         );

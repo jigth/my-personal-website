@@ -4,7 +4,7 @@
 
       <section class="presentation">
         <div class="presentation-container">
-            <img class="presentation-container__img" src="/me.webp" alt="Daniel Ochoa Montes image" />
+            <img class="presentation-container__img" src="/img/me.webp" alt="Daniel Ochoa Montes image" />
             <div class="presentation-container__title">Daniel Ochoa Montes</div>
         </div>
 

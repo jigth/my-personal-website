@@ -14,21 +14,14 @@ const props = defineProps({
     }
 })
 
-const html = MarkdownRenderer.getInstance().renderTextToHTML(props.markdownContent as string);
+const html = ref<string>('')
+
+watch(() => props.markdownContent, () => {
+    if (props.markdownContent.length > 0) {
+        html.value = MarkdownRenderer.getInstance().renderTextToHTML(props.markdownContent as string);
+    }
+})
 </script>
 
 <style lang="scss" scoped>
-// #post-content :deep() {
-//     h1 {
-//         color: red;
-//     }
-
-//     p {
-//         color: blue;
-//     }
-
-//     img {
-//         width: 300px;
-//     }
-// }
 </style>
