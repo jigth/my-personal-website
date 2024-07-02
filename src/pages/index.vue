@@ -37,12 +37,24 @@ const projects: Project[] = [
     link: "https://github.com/jigth/fifa21-api-replica",
   },
   {
-    title: "Automated Email Sender System",
+    title: "Automated Emails",
     link: "https://github.com/jigth/automated-emails",
   },
   {
     title: "Anime List App",
     link: "https://github.com/jigth/AnimeListApp",
+  },
+  {
+    title: "Feat It Healthy",
+    link: "https://github.com/jigth/Feat-It-Healthy",
+  },
+  {
+    title: "JSON Generator",
+    link: "https://github.com/jigth/companies-json-generator",
+  },
+  {
+    title: "TDD 1",
+    link: "https://github.com/jigth/TDD-1",
   },
   {
     title: "JinfoTeur",
