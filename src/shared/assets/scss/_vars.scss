@@ -3,10 +3,19 @@ $defaultTextColor: #333;
 $darkerTextColor: #111;
 $navbarColor: #fde3c7;
 
+$navbarMobileMenuColor: #414432;
+
+// (2024-07-02) Experimental colors (some ideas that I'm testing right now)
+// $navbarMobileMenuColor: #d5e28c;
+// $navbarMobileMenuColor: #e0cfb6;
+// $navbarMobileMenuColor: #eadac1;
+// $navbarMobileMenuColor: #d8e495;
+// $navbarMobileMenuColor: #d6e199;
+
 $pagePadding: 2rem 0;
 
-$defaultTitlesFont: "Libre Baskerville", Helvetica, Arial;
-$highlightedTitlesFont: Merriweather, Helvetica, Arial;
+$defaultTitlesFont: Merriweather, Helvetica, Arial;
+$highlightedTitlesFont: "Libre Baskerville", Helvetica, Arial;
 
 $defaultFont: Montserrat, Arial, sans-serif;
 $highlightedFont: "Bodoni Moda", Helvetica, Arial;

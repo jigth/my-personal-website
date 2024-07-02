@@ -9,14 +9,28 @@
             </div>
     
             <div class="navbar-menu">
-                <div class="navbar-item" v-for="(item, i) in navMenuItems" :key="i">
-                    <a class="navbar-item__link":href="item.link">{{ item.name }}</a> <!-- Blog posts archive -->
+                <div class="navbar-desktop">
+                    <div class="navbar-item" v-for="(item, i) in navMenuItems" :key="i">
+                        <a class="navbar-item__link" :href="item.link">{{ item.name }}</a> <!-- Blog posts archive -->
+    
+                        <div
+                            v-if="i < (navMenuItems.length - 1)"
+                            class="navbar-separator"
+                        >|</div>
+    
+                    </div>
+                </div>
 
-                    <div 
-                        v-if="i < (navMenuItems.length - 1)"
-                        class="navbar-separator"
-                    >|</div>
+                <div class="navbar-mobile">
+                    <button class="navbar-mobile__toggle">
+                        <font-awesome @click="() => displayMobileItems = !displayMobileItems" icon="burger" style="font-size: 25px;" />
+                    </button>
 
+                    <div :style="[ displayMobileItems ? 'display: flex;' : 'display: none;' ]" class="navbar-mobile__items">
+                        <div class="navbar-mobile__items__item" v-for="(item, i) in navMenuItems" :key="i">
+                            <a class="navbar-item__link" :href="item.link">{{ item.name }}</a> <!-- Blog posts archive -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -30,6 +44,8 @@ const navMenuItems: { name: string, link: string }[] = [
     { name: "About", link: "/about" },
     { name: "Blog", link: "/blog" },
 ]
+
+const displayMobileItems = ref<boolean>(false)
 </script>
 
 <style scoped lang="scss">
@@ -114,5 +130,65 @@ const navMenuItems: { name: string, link: string }[] = [
 
 .navbar-menu {
     display: flex;
+
+    .navbar-desktop {
+        display: flex;
+    }
+
+    .navbar-mobile {
+        display: none;
+    }
+}
+
+@media (width <= 992px) {
+    .navbar-item__specialty {
+        display: none;
+    }
+
+    .navbar-menu {
+        .navbar-desktop {
+            display: none;
+        }
+
+        .navbar-mobile {
+            display: flex;
+
+            &__toggle {
+                order: 2;
+                background: none;
+                color: inherit;
+                border: none;
+                padding: 0;
+                font: inherit;
+                cursor: pointer;
+                outline: inherit;
+            }
+
+            &__items {
+                order: 1;
+                flex-direction: column;
+                background: $navbarMobileMenuColor;
+                width: 100vw;
+                position: absolute;
+                top: 55px;
+                padding: 10px 0;
+                left: 0;
+
+                &__item {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    padding: 2px 0;
+                    margin: auto;
+
+                    a {
+                        color: #eee;
+                        text-shadow: 0 0 0.7px #eee;
+
+                    }
+                }
+            }
+        }
+    }
 }
 </style>

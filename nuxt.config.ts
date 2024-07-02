@@ -5,15 +5,24 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    ['@nuxtjs/google-fonts', {
-      families: {
-        Montserrat: true,
-        Merriweather: true,
-        "Libre Baskerville": true,
-        "Bodoni Moda": true,
-      }
-    }]
+    '@vesp/nuxt-fontawesome',
+    '@nuxtjs/google-fonts',
   ],
+
+  fontawesome: {
+    icons: {
+      solid: ['burger'],
+    }
+  },
+
+  googleFonts: {
+    families: {
+      Montserrat: true,
+      Merriweather: true,
+      "Libre Baskerville": true,
+      "Bodoni Moda": true,
+    }
+  },
 
   // Keep some dirs under src, but the rest of them are in their default location
   dir: {
