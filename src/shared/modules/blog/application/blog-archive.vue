@@ -36,6 +36,9 @@ defineProps({
 <style scoped lang="scss">
 .blog-archive__title {
     margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #444;
 }
 
 .blog-archive {
@@ -46,11 +49,40 @@ defineProps({
     }
 
     &__grid {
-        max-width: 80%;
+        max-width: 80vw;
         margin: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 20px;
+    }
+}
+
+@media (width <= 992px) {
+    .blog-archive {
+        &__img {
+            width: 350px !important;
+            height: 350px !important;
+        }
+
+        &__description {
+            max-width: 350px;
+        }
+    }
+}
+</style>
+
+<style lang="scss">
+@media (width <= 768px) {
+    .blog-archive-post {
+        &__img {
+            width: 250px !important;
+            height: 250px !important;
+        }
+
+        &__description {
+            max-width: 250px;
+        }
     }
 }
 </style>

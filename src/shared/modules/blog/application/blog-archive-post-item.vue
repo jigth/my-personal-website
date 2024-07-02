@@ -36,20 +36,17 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
-$width: 300px;
-$textColor: #ddd;
+$width: 350px;
+$height: $width;
+$textColor: #555;
 
 .blog-archive-post {
     padding: 20px;
-    background: #71675c;
-
-    div {
-        color: #ddd;
-    }
+    box-shadow: .1px .2px 3px .1px #999;
 
     &__img {
         width: $width;
-        height: $width;
+        height: $height;
         display: block;
         margin: 0 auto;
     }
@@ -57,19 +54,24 @@ $textColor: #ddd;
     &__link {
         display: block;
         padding: 20px auto !important;
+        text-decoration: none;
     }
 
     &__title {
+        margin-top: 15px;
         text-align: center;
-        text-decoration: none !important;
         text-transform: capitalize;
         color: $textColor;
     }
 
     &__description {
-        width: $width;
+        max-width: $width;
         margin: 0 auto;
         color: $textColor;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
     }
 }
 </style>

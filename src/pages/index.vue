@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <h1 class="my-name">Daniel Ochoa Montes</h1>
+  <section class="wrapper-section">
+    <p class="my-name">Daniel Ochoa Montes</p>
     <section>
       <h1 ref="specialization" class="specialization">Software Development</h1>
     </section>
@@ -12,13 +12,16 @@
           class="tech-projects-grid__list-item"
           v-for="(project, i) in projects"
         >
-          <a class="tech-projects-grid__list-item__link" :href="project.link">
+          <a
+            class="tech-projects-grid__list-item__link"
+            :href="project.link"
+            target="_blank"
+          >
             <div>{{ project.title }}</div>
           </a>
         </li>
       </ul>
     </section>
-
   </section>
 </template>
 
@@ -37,12 +40,24 @@ const projects: Project[] = [
     link: "https://github.com/jigth/fifa21-api-replica",
   },
   {
-    title: "Automated Email Sender System",
+    title: "Automated Emails",
     link: "https://github.com/jigth/automated-emails",
   },
   {
     title: "Anime List App",
     link: "https://github.com/jigth/AnimeListApp",
+  },
+  {
+    title: "Feat It Healthy",
+    link: "https://github.com/jigth/Feat-It-Healthy",
+  },
+  {
+    title: "JSON Generator",
+    link: "https://github.com/jigth/companies-json-generator",
+  },
+  {
+    title: "TDD 1",
+    link: "https://github.com/jigth/TDD-1",
   },
   {
     title: "JinfoTeur",
@@ -58,35 +73,42 @@ const detectAnimatedElement = () => {
   if (specialization.value && isMounted.value) {
     specializationDefined.value = true;
   }
-}
+};
 
 const manageAnimatedElementVisibility = () => {
   if (specialization.value === null) return;
 
   const windowHeight = window.innerHeight;
-  const specializationNode = (specialization.value as HTMLElement);
+  const specializationNode = specialization.value as HTMLElement;
   const nodePosition = specializationNode.getBoundingClientRect();
 
   if (nodePosition.top < windowHeight) {
-    specializationNode.classList.add('visible');
+    specializationNode.classList.add("visible");
   }
-}
+};
 
 watch(specialization, detectAnimatedElement);
 
 onMounted(() => {
   isMounted.value = true;
-  window.addEventListener('scroll', manageAnimatedElementVisibility);
-  window.addEventListener('touchmove', manageAnimatedElementVisibility);
-})
+  window.addEventListener("scroll", manageAnimatedElementVisibility);
+  window.addEventListener("touchmove", manageAnimatedElementVisibility);
+});
 </script>
 
 <style scoped lang="scss">
 $headingColor: #444;
+$gapWidth: 20px;
+
+.wrapper-section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
 
 .my-name {
   font-size: 6.8rem;
-  font-family: $titlesFontFamily;
+  font-weight: 500;
+  font-family: $highlightedFont;
   color: $headingColor;
   padding: 30vh 0;
   text-align: center;
@@ -94,14 +116,15 @@ $headingColor: #444;
 
 .specialization {
   font-size: 3rem;
-  
+  font-weight: 500;
+  font-family: $highlightedTitlesFont;
+
   transform: translateX(-100%);
   transition: transform 1s ease;
 
   &.visible {
     transform: translateX(0);
     text-align: center;
-
   }
 }
 
@@ -112,16 +135,23 @@ $headingColor: #444;
 
   h2 {
     margin-bottom: 20px;
+    font-weight: 500;
+    // font-family: $highlightedFont;
   }
 
+  
   &-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 30px;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    gap: $gapWidth 30px;
     list-style: none;
     transition: transform 0.5s ease;
 
     &__list-item {
+      width: calc(50% - $gapWidth);
+
       &:hover {
         transform: scale(1.05);
       }
@@ -152,6 +182,58 @@ $headingColor: #444;
         }
       }
     }
+  }
+}
+
+@media (width <= 992px) {
+
+  .my-name {
+    font-size: 4.6rem;
+  }
+
+  .tech-projects {
+    &-grid {
+      &__list-item__link div {
+        font-size: 1.1rem !important;
+      }
+    }
+  }
+}
+
+@media (width <= 768px) {
+  .wrapper-section {
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+
+  .my-name {
+    font-family: $highlightedFont !important;
+    color: $headingColor;
+    padding: 20vh 0;
+  }
+
+  .specialization {
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+
+  .tech-projects {
+    &-grid {
+      &__list-item {
+        width: 80%;
+      }
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (width <= 300px) {
+  .my-name {
+    font-size: 3.2rem;
+    text-align: center;
   }
 }
 </style>

@@ -2,14 +2,14 @@
     <section class="about" style="width: 80%; margin: auto">
       <h1 class="about-title" style="padding-bottom: 20px">About me</h1>
 
-      <section class="presentation">
-        <div class="presentation-container">
-            <img class="presentation-container__img" src="/img/me.webp" alt="Daniel Ochoa Montes image" />
-            <div class="presentation-container__title">Daniel Ochoa Montes</div>
+      <section class="about__presentation">
+        <div class="about__presentation-container">
+            <img class="about__presentation-container__img" src="/img/me.webp" alt="Daniel Ochoa Montes image" />
+            <div class="about__presentation-container__title">Daniel Ochoa Montes</div>
         </div>
 
-        <section>
-            <p class="presentation-description">
+        <section class="about__presentation-container-2">
+            <p class="about__presentation-description">
                 I am a Software Engineer with degree in Systems Engineering. I have
                 experience in backend, frontend and cloud technologies such as AWS. I
                 have worked at different workplace cultures from a big enterprise with a
@@ -19,7 +19,7 @@
                 the job done in a great way.
             </p>
     
-            <section class="presentation-tech">
+            <section class="about__presentation-tech">
               <p style="margin-top: 1rem">
                 The following are the technologies that I use the most depending on the
                 need of the project I am working at
@@ -41,35 +41,71 @@
 
 <style scoped lang="scss">
 .about {
+    max-width: 1200px;
     &-title {
         text-align: center;
         font-size: 2.5rem;
+        font-weight: 500;
+        color: #444;
+    }
+
+    &__presentation {
+        display: flex;
+        
+        gap: 30px;
+
+        &-container {
+            &__img {
+                width: 400px;
+            }
+
+            &__title {
+                text-align: center;
+            }
+        }
+
+        &-description {
+            font-size: 1.2rem;
+            text-align: justify;
+            text-justify: distribute;
+            text-align-last: left;
+            hyphens: auto;
+        }
+
+        &-tech {
+            font-size: 1.2rem;
+        }
     }
 }
 
-.presentation {
-    display: flex;
-    gap: 30px;
 
-    &-container {
+@media (width <= 992px) {
+    .about {
+        &__presentation {
+            flex-wrap: wrap;
+            justify-content: center;
 
-        &__img {
-            width: 400px;
-            min-width: 200px;
-            max-width: 40vw;
+            &-container-2 {
+                min-width: 300px;
+            }
         }
+    }
+}
 
-        &__title {
+@media (width <= 768px) {
+    .about {
+        &-title {
             text-align: center;
+            font-size: 2rem;
         }
-    }
 
-    &-description {
-        font-size: 1.3rem;
-    }
-
-    &-tech {
-        font-size: 1.3rem;  
+        &__presentation {
+            &-container {
+                &__img {
+                    width: 300px;
+                }
+            }
+        }
     }
 }
 </style>
