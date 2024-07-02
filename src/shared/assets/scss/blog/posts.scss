@@ -1,15 +1,15 @@
-$maxContentWidth: 40vw;
+$width: 90%;
+$maxWidth: 700px;
 
 #post-content :deep() {
-    // margin: 20px 40px;
+    width: $width;
+    max-width: $maxWidth;
 
-    width: 40vw;
-    max-width: $maxContentWidth;
     margin: auto;
 
     #title {
         text-align: center;
-        max-width: $maxContentWidth;
+        max-width: $maxWidth;
         font-size: 3rem;
         margin-top: 30px;
         margin-bottom: 20px;
@@ -24,11 +24,10 @@ $maxContentWidth: 40vw;
         width: 300px;
         text-align: center;
         margin: auto;
-        background: red;
         display: block;
     }
 
     #featured-img {
-        width: $maxContentWidth !important;
+        width: $width;
     }
 }
