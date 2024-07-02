@@ -7,8 +7,10 @@ export default defineNuxtConfig({
   modules: [
     ['@nuxtjs/google-fonts', {
       families: {
-        Poppins: true,
-        Roboto: true,
+        Montserrat: true,
+        Merriweather: true,
+        "Libre Baskerville": true,
+        "Bodoni Moda": true,
       }
     }]
   ],
