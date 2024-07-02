@@ -8,3 +8,17 @@
 body {
     background-color: $defaultBgColor;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $defaultTitlesFont;
+}
+
+p,
+div {
+    font-family: $defaultFont;
+}
