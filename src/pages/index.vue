@@ -136,7 +136,7 @@ $gapWidth: 20px;
   h2 {
     margin-bottom: 20px;
     font-weight: 500;
-    // font-family: $highlightedFont;
+    font-family: $defaultFont;
   }
 
   
