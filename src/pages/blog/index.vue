@@ -1,6 +1,6 @@
 <template>
     <section>
-        <BlogArchive title="My Posts" :posts="blogArchivePosts"/>
+        <BlogArchive title="Tech Insights" subtitle="By Daniel Ochoa Montes" :posts="blogArchivePosts"/>
     </section>
 </template>
 
@@ -10,25 +10,11 @@ import type { BlogArchivePost } from "../../shared/modules/blog/domain/posts";
 
 const blogArchivePosts: BlogArchivePost[] = [
     {
-        title: 'title 1',
-    description: 'description 1',
-        imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png',
+        title: 'Rsync, a faster backup option',
+        description: 'Backup and copy your files between servers and PCs using Rsync',
+        imgUrl: '/modules/blog/assets/backup-rsync.webp',
         imgAlt: 'Mobile Phone post',
-        postLink: '/blog/title1',
-    },
-    {
-        title: 'title 2',
-        description: 'description 2',
-        imgUrl: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg',
-        imgAlt: 'Colorful peacock',
-        postLink: '/blog/title2',
-    },
-    {
-        title: 'title 3',
-        description: 'description 3',
-        imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Creeperasha_Linux_test_image_upload.png',
-        imgAlt: 'Tux Being Tux',
-        postLink: '/blog/title3',
+        postLink: '/blog/backup-copy-files-rsync',
     },
 ]
 </script>
