@@ -10,7 +10,8 @@ $maxWidth: 700px;
     #title {
         text-align: center;
         max-width: $maxWidth;
-        font-size: 3rem;
+        font-size: 2.5rem;
+        font-weight: 300;
         margin-top: 30px;
         margin-bottom: 20px;
     }
@@ -18,6 +19,7 @@ $maxWidth: 700px;
     p {
         margin: 20px;
         font-size: 1.2rem;
+        line-height: 2rem;
     }
 
     img {

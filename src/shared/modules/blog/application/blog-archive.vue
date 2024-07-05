@@ -1,6 +1,7 @@
 <template>
     <section class="blog-archive">
         <h1 class="blog-archive__title">{{ title }}</h1>
+        <h3 class="blog-archive__subtitle">{{ subtitle }}</h3>
 
         <div class="blog-archive__grid">
             <BlogArchivePostItem 
@@ -26,6 +27,10 @@ defineProps({
         type: String,
         required: true,
     },
+    subtitle: {
+        type: String,
+        required: true,
+    },
     posts: {
         type: Object as PropType<BlogArchivePost[]>,
         required: true,
@@ -46,6 +51,11 @@ defineProps({
 
     &__title {
         text-align: center !important;
+    }
+    &__subtitle {
+        text-align: center !important;
+        font-weight: 500;
+        margin-bottom: 20px;
     }
 
     &__grid {

@@ -41,6 +41,12 @@ $height: $width;
 $textColor: #555;
 
 .blog-archive-post {
+    transition: transform 0.5s;
+
+    &:hover {
+        transform: scale(1.03) rotate(-2deg);
+    }
+
     padding: 20px;
     box-shadow: .1px .2px 3px .1px #999;
 
@@ -66,7 +72,7 @@ $textColor: #555;
 
     &__description {
         max-width: $width;
-        margin: 0 auto;
+        margin: 10px auto;
         color: $textColor;
 
         &::first-letter {
