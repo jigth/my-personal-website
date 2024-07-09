@@ -19,11 +19,13 @@ export class MarkdownRenderer implements IMarkdownRenderer {
     }
 
     private getSanitizerConfig = () => ({
-        allowedTags: sanitizeHTML.defaults.allowedTags.concat([ 'img' ]),
+        allowedTags: sanitizeHTML.defaults.allowedTags.concat([ 'img', 'span' ]),
         allowedAttributes: {
             ...sanitizeHTML.defaults.allowedAttributes,
             img: [ 'id', 'class', 'src', 'srcset', 'alt' ],
-            h1: [ 'id', 'class', 'src', 'srcset', 'alt' ],
+            h1: [ 'id', 'class' ],
+            span: [ 'id', 'class', 'style' ],
+            div: [ 'id', 'class', 'style' ],
         }
 
     })
