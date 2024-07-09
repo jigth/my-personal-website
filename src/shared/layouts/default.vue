@@ -23,7 +23,7 @@ import Footer from '../components/Footer.vue';
 }
 
 .content {
-    padding: 50px;
+    padding: 50px 0;
     flex-grow: 1;
 }
 </style>
