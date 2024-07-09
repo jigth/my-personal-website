@@ -12,8 +12,8 @@ const blogArchivePosts: BlogArchivePost[] = [
     {
         title: 'Rsync, a faster backup option',
         description: 'Backup and copy your files between servers and PCs using Rsync',
-        imgUrl: '/modules/blog/assets/backup-rsync.webp',
-        imgAlt: 'Mobile Phone post',
+        imgUrl: '/modules/blog/assets/rsync-1/backup-rsync.webp',
+        imgAlt: 'Data center pic',
         postLink: '/blog/backup-copy-files-rsync',
     },
 ]
