@@ -16,6 +16,10 @@ $maxWidth: 700px;
         margin-bottom: 20px;
     }
 
+    h3 {
+        margin: 20px auto;
+    }
+
     p {
         margin: 20px;
         font-size: 1.2rem;
@@ -31,5 +35,22 @@ $maxWidth: 700px;
 
     #featured-img {
         width: $width;
+    }
+
+    .post-img-container {
+        margin: 20px auto;
+        width: $width;
+        
+        &__img {
+            width: $width;
+            margin: 10px auto;
+        }
+
+        &__legend {
+            margin: auto;
+            display: block;
+            text-align: center;
+            margin: 5px 0;
+        }
     }
 }
