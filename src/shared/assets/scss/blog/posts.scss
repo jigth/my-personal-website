@@ -26,11 +26,22 @@ $maxWidth: 700px;
         line-height: 2rem;
     }
 
+    ul, ol {
+        li {
+            margin: 30px;
+        }
+    }
+
     img {
         width: 300px;
         text-align: center;
         margin: auto;
         display: block;
+    }
+
+    pre, a {
+        text-wrap: wrap;
+        word-wrap: break-word;
     }
 
     #featured-img {

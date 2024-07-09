@@ -1,19 +1,29 @@
 <template>
-    <section class="page-container">
+    <div class="layout">
         <Navbar />
-    
-        <slot />
-    </section>
+        
+        <div class="content">
+            <slot />
+        </div>
+
+        <Footer />
+    </div>
 </template>
 
 <script setup lang="ts">
 import Navbar from '../components/Navbar.vue';
+import Footer from '../components/Footer.vue';
 </script>
 
 <style scoped lang="scss">
-.page-container {
+.layout {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    min-height: 100vh;
+}
+
+.content {
+    padding: 50px 0;
+    flex-grow: 1;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="post-content" v-html="html"></div>
+        <div v-html="html"></div>
     </div>
 </template>
 
@@ -22,6 +22,3 @@ watch(() => props.markdownContent, () => {
     }
 })
 </script>
-
-<style lang="scss" scoped>
-</style>
