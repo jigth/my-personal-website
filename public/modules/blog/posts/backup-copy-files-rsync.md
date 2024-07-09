@@ -53,7 +53,7 @@ All the files were generated automatically using a Python3 script and the “lor
 
 For the first experiment I’ll use FTP, SFTP would have identical performance (if not a little bit less) as it is FTP but with encryption over the transport layer.
 
-It is possible to use the FileZIlla client or a CLI option, I’ll show the GUI option and its logs as that's the most common way to use FTP.
+It is possible to use the FileZilla client or a CLI option, I’ll show the GUI option and its logs as that's the most common way to use FTP.
 
 <div class="post-img-container">
     <a href="/modules/blog/assets/rsync-1/filezilla.png" target="_blank">
