@@ -1,3 +1,5 @@
 .vs*
 pending*
 node_modules/
+.nuxt
+.output
